@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #fff; /* Título branco */
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.flashcards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flashcard {
+    width: 200px;
+    height: 200px;
+    background-color: #fff; /* Fundo branco do card */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color: #333; /* Texto em cinza escuro */
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Cor da pergunta em cinza escuro */
+}
+
+.answer {
+    display: none;
+    font-size: 16px;
+    color: #444; /* Cor da resposta em cinza */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flashcard.active .answer {
+    display: block;
+}
+
+.flashcard.active .question {
+    display: none;
+}
+
+footer {
+    background-color: #222; /* Cor de fundo escura para o rodapé */
+    color: #fff; /* Texto branco */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
